@@ -33,9 +33,9 @@ define(["require", "exports"], function (require, exports) {
 				__children__: {},
 				__using__: ['libraries/Drawing']
 			},
-			"Krnl": {
+			"Kultum": {
 				__children__: {},
-				__using__: ['libraries/Krnl']
+				__using__: ['libraries/Kultum']
 			}
 		},
 	};

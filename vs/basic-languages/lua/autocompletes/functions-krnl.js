@@ -19,13 +19,24 @@ define(["require", "exports"], function (require, exports) {
 				},
 			},
 
-			"iskrnlclosure()": {
-				"insertText": "iskrnlclosure(${1:f})",
+			"isKclosure()": {
+				"insertText": "isKclosure(${1:f})",
 				"documentation": {
 					value: [
-						"```lua", "function iskrnlclosure(f: function)\n  -> boolean", "```",
+						"```lua", "function isKclosure(f: function)\n  -> boolean", "```",
 						"",
-						"Returns whether the closure was created by Krnl."
+						"Returns whether the closure was created by Kultum."
+					].join("\n")
+				},
+			},
+
+			"printidentity()": {
+				"insertText": "printidentity()",
+				"documentation": {
+					value: [
+						"```lua", "function printidentity()\n  -> Number", "```",
+						"",
+						"prints the executors thread level."
 					].join("\n")
 				},
 			},
@@ -310,12 +321,12 @@ define(["require", "exports"], function (require, exports) {
 				"insertText": "getconnections(${1:signal})",
 				"documentation": {
 					value: [
-						"```lua", "function getconnections(signal: RBXScriptSignal)\n  -> Array<KrnlConnection>", "```",
+						"```lua", "function getconnections(signal: RBXScriptSignal)\n  -> Array<KultumConnection>", "```",
 						"",
 						"Returns a list of connections for the given signal.",
 						"",
 						'```lua',
-						'export type KrnlConnection = {',
+						'export type KultumConnection = {',
 						'\tFunction: function,',
 						'\tEnable: (self) -> void,',
 						'\tDisable: (self) -> void,',
@@ -643,7 +654,7 @@ define(["require", "exports"], function (require, exports) {
 						'metatable.__namecall = newcclosure(',
 						'\tfunction(self: Instance, ...any)',
 						'\t\tlocal method = getnamecallmethod()',
-						'\t\tif method == "LovesKrnl" then',
+						'\t\tif method == "LovesEspresso" then',
 						'\t\t\treturn true',
 						'\t\tend',
 						'\t\treturn namecall(self, ...)',
@@ -683,7 +694,7 @@ define(["require", "exports"], function (require, exports) {
 					value: [
 						"```lua", "function checkcaller()\n  -> boolean", "```",
 						"",
-						"Returns whether the calling thread was created by Krnl.",
+						"Returns whether the calling thread was created by Kultum.",
 					].join("\n")
 				},
 			},
@@ -808,7 +819,7 @@ define(["require", "exports"], function (require, exports) {
 					value: [
 						"```lua", "function getcustomasset(assetPath: string)\n  -> Content: string", "```",
 						"",
-						"Generates a rbxasset:// [`content`](https://developer.roblox.com/en-us/articles/Content) URL for the given asset from Krnl's `workspace` directory.",
+						"Generates a rbxasset:// [`content`](https://developer.roblox.com/en-us/articles/Content) URL for the given asset from Kultums's `workspace` directory.",
 					].join("\n")
 				},
 			},

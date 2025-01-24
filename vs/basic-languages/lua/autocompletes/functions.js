@@ -49,6 +49,16 @@ define(["require", "exports"], function (require, exports) {
 				},
 			},
 
+			"WalkSpeed": {
+				"insertText": "game.Players.LocalPlayer.Characther.Humanoid.Walkspeed = ",
+				"documentation": {
+					value: [
+						"```lua```",
+						"",
+						"Changes walkspeed"
+					].join("\n")
+				},
+			},
 			"getmetatable()": {
 				"insertText": "getmetatable(${1:object})",
 				"documentation": {
