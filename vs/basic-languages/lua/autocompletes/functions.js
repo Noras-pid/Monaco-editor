@@ -50,7 +50,7 @@ define(["require", "exports"], function (require, exports) {
 			},
 
 			"WalkSpeed": {
-				"insertText": "game.Players.LocalPlayer.Characther.Humanoid.Walkspeed = ",
+				"insertText": "game.Players.LocalPlayer.Character.Humanoid.Walkspeed = ",
 				"documentation": {
 					value: [
 						"```lua```",
